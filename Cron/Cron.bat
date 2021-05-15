@@ -1,0 +1,1 @@
+C:\UwAmp\bin\php\php-7.0.3\php.exe -f C:\UwAmp\www\PPE-Copy\Cron\cloture.php

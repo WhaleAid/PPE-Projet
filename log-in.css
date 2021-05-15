@@ -1,0 +1,622 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #191919;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex .group:first-child {
+  margin-right: 1em;
+}
+
+.group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+input:not([type="file"]) {
+  font-size: 14px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 150px;
+  border: none;
+  border-bottom: 1px solid #757575;
+}
+
+input[type="email"],
+input[name="adresse"] {
+  width: 97%;
+}
+
+input[type="checkbox"].showpassword {
+  display: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* LABEL ======================================= */
+
+label:not([for="portrait"], [for="showpassword"]) {
+  color: #999;
+  font-size: 14px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+label[for="portrait"] {
+  margin-top: 10px;
+}
+
+label[for="showpassword"] {
+  top: 10px;
+  position: relative;
+}
+
+/* active state */
+input:focus ~ label:not([for="showpassword"]),
+input:valid ~ label:not([for="showpassword"]) {
+  top: -10px;
+  font-size: 14px;
+  color: #3498db;
+}
+
+/* BOTTOM BARS ================================= */
+.bar-login {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.barpass-login {
+  width: 100% !important;
+}
+
+.barlong-login {
+  width: 100.5%;
+}
+
+.bar-login:before,
+.bar-login:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 0px;
+  position: absolute;
+  background: #3498db;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.bar-login:before {
+  left: 50%;
+}
+
+.bar-login:after {
+  right: 50%;
+}
+input:focus ~ .bar-login:before,
+input:focus ~ .bar-login:after {
+  width: 50%;
+}
+
+.bar {
+  position: relative;
+  display: block;
+  width: 165px;
+}
+
+.barpass {
+  width: 180px !important;
+}
+
+.barlong {
+  width: 100.5%;
+}
+
+.bar:before,
+.bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 0px;
+  position: absolute;
+  background: #3498db;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
+}
+
+/* active state */
+
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
+  width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* active state */
+
+input:focus ~ .highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #3498db;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@-moz-keyframes inputHighlighter {
+  from {
+    background: #3498db;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@keyframes inputHighlighter {
+  from {
+    background: #3498db;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+.login-form {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  padding: 40px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border: 2px solid #eee;
+  border-radius: 20px;
+}
+
+.login-form input:not([type="submit"]) {
+  width: 100%;
+  margin-top: 1em;
+}
+
+.login-form h1 {
+  color: black;
+  text-align: center;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+
+.login-form input[type="submit"],
+.login-form input[type="submit-reset"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: auto;
+  outline: none;
+  color: #ffffff;
+  background-color: #3888f1;
+  border-radius: 5px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.login-form input[type="submit"]:hover,
+.login-form input[type="submit-reset"]:hover {
+  background: #1a73e8;
+  color: white;
+}
+
+.login-forgot-pass {
+  color: #3888f1;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0.5em;
+  padding: 0.5em;
+  width: 100%;
+}
+
+.login-forgot-pass:hover {
+  color: #1a73e8;
+  border-radius: 5px;
+  background-color: rgba(48, 95, 248, 0.1);
+}
+
+/*SIGN UP*/
+
+.login-form2 {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  padding: 40px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border: 2px solid #eee;
+  border-radius: 20px;
+}
+
+.logo {
+  padding-top: 0.7em;
+  width: 20%;
+  float: left;
+}
+.logo-login {
+  padding-top: 0.7em;
+  width: 40%;
+  margin: auto;
+}
+
+.login-form2 h1 {
+  color: black;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+
+.passbox {
+  display: flex;
+}
+
+#output {
+  position: absolute;
+  margin-top: 0;
+  color: red;
+  font-size: 11px;
+}
+
+/* .login-form2 input[type="text"],
+.login-form2 input[type="email"],
+.login-form2 input[type="password"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 1px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 10px 10px;
+    width: 200px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.login-form2 input[type="text"]:focus,
+.login-form2 input[type="password"]:focus,
+.login-form2 input[type="email"]:focus {
+    width: 280px;
+    border-color: #2ecc71;
+} */
+.section-header-login {
+  justify-content: center;
+  display: grid;
+}
+
+.section-header {
+  display: grid;
+}
+
+.login-form2 input[type="submit"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: auto;
+  outline: none;
+  color: #ffffff;
+  background-color: #3888f1;
+  border-radius: 5px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.login-form2 input[type="submit"]:hover {
+  background: #1a73e8;
+  color: white;
+}
+
+/*HOME PAGE*/
+
+.gestion-frais {
+  width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  background: #000000;
+}
+
+.gestion-frais {
+  border-spacing: 3px;
+}
+
+.profile-img {
+  width: 7%;
+  margin: 10px;
+  display: inline-block;
+}
+
+.img-placeholder h4 {
+  margin-top: 40%;
+  color: rgb(129, 128, 128);
+}
+
+.imageupload:hover .img-placeholder {
+  display: block;
+  cursor: pointer;
+}
+
+.profil {
+}
+
+.profil p {
+  color: white;
+  margin: 5px;
+}
+
+.gestion-frais input[type="text"],
+select {
+  border: 0;
+  background: none;
+  margin: 1px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 10px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+option {
+  color: white;
+  background-color: black;
+}
+
+.gestion-frais h1 {
+  color: white;
+}
+
+.logopfp {
+  margin-top: 20px;
+  float: right;
+  display: inline-block;
+  width: 20%;
+}
+
+.radio-title {
+  color: white;
+}
+
+.radio-label {
+  color: white;
+}
+
+.logged-text {
+  color: black;
+}
+
+.titre {
+  width: 180;
+  clear: left;
+  float: left;
+}
+
+.zone {
+  float: left;
+  color: white;
+  margin: 5px;
+}
+
+body {
+  margin-top: 20px;
+  color: #1a202c;
+  text-align: left;
+  background-color: #ffffff;
+}
+
+.main-body {
+  padding: 15px;
+}
+
+.card {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0 solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1rem;
+}
+
+.gutters-sm {
+  margin-right: -8px;
+  margin-left: -8px;
+}
+
+.gutters-sm > .col,
+.gutters-sm > [class*="col-"] {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.mb-3,
+.my-3 {
+  margin-bottom: 1rem !important;
+}
+
+.bg-gray-300 {
+  background-color: #e2e8f0;
+}
+
+.h-100 {
+  height: 100% !important;
+}
+
+.shadow-none {
+  box-shadow: none !important;
+}
+
+.imageupload {
+  justify-content: center;
+  text-align: center;
+  margin: 8em auto;
+  display: grid;
+}
+
+.imageoverlay {
+  cursor: pointer;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  transform: translate(148%, 70%);
+}
+
+.imageupload .pfps {
+  cursor: pointer;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 100;
+}
+
+.imageupload .pfp {
+  cursor: pointer;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.imageupload .pfp:hover {
+  opacity: 0.5;
+}
+
+.success {
+  color: white;
+  background-color: #00662a;
+  padding: 2px;
+  text-align: center;
+}
+
+.error {
+  color: white;
+  background-color: #ff160e;
+  padding: 2px;
+  text-align: center;
+}
+
+.logorecover {
+  width: 5em;
+  height: auto;
+  margin-right: 1em;
+}
+
+.text-danger {
+  font-size: 1em;
+  color: red;
+}
+
+.text-success {
+  font-size: 1em;
+  color: green;
+}
+
+#recover {
+  margin: auto;
+  padding: auto;
+  background-color: #000000;
+  width: 50%;
+  align-items: center;
+}
+
+#recover form {
+  width: 25%;
+  display: block;
+}
+
+#recover form > input {
+  margin-top: 2em;
+}
+
+#recover form > input[name='submit-reset']{
+  width: 80%;
+  text-align: center;
+  padding: auto;
+}
+
+.recover-heading{
+  margin-top: 2em;
+  display: flex;
+}
