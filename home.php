@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('/functions.php');
-//error_reporting(0);
+error_reporting(0);
 date_default_timezone_set('Europe/Paris');
 $user = $_SESSION['USER'];
 if ($_GET) {
@@ -117,7 +117,7 @@ $today = $year . '-' . $month . '-' . $day;
 										<select name="mois" required>
 											<option disabled selected value> -- Mois -- </option>
 											<option value="1">Janvier</option>
-											<option value="2">Férvier</option>
+											<option value="2">Février</option>
 											<option value="3">Mars</option>
 											<option value="4">Avril</option>
 											<option value="5">Mai</option>

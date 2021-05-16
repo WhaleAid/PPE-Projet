@@ -300,7 +300,7 @@ if ($_SESSION['USER'] != null) {
                                                                 <option disabled selected value> -- Mois -- </option>
                                                             <?php } ?>
                                                             <option value="1">Janvier</option>
-                                                            <option value="2">Férvier</option>
+                                                            <option value="2">Février</option>
                                                             <option value="3">Mars</option>
                                                             <option value="4">Avril</option>
                                                             <option value="5">Mai</option>
