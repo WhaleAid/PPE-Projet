@@ -133,7 +133,7 @@ if ($_SESSION['USER'] != null) {
     $rowhf = $resulthf->fetchAll();
 
 
-    $query2 = "SELECT * FROM visiteur V JOIN  lignefraisforfait LF ON LF.idVisiteur = V.id WHERE V.login = '$usercons'";
+    $query2 = "SELECT * FROM visiteur V JOIN  lignefraisforfait LF ON LF.idVisiteur = V.id WHERE V.login = '$usercons' AND mois = '$mois'";
     $sth2 = $conn->prepare($query2);
     $sth2->execute();
     $result2 = $sth2->fetchAll();
@@ -154,7 +154,7 @@ if ($_SESSION['USER'] != null) {
         }
     }
 
-    $query4 = "SELECT * FROM visiteur V JOIN  lignefraishorsforfait LF ON LF.idVisiteur = V.id WHERE V.login = '$user'";
+    $query4 = "SELECT * FROM visiteur V JOIN  lignefraishorsforfait LF ON LF.idVisiteur = V.id WHERE V.login = '$usercons' AND mois = '$mois'";
     $sth4 = $conn->prepare($query4);
     $sth4->execute();
     $result4 = $sth4->fetchAll();
