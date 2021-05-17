@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 15, 2021 at 04:30 PM
+-- Generation Time: May 17, 2021 at 05:24 AM
 -- Server version: 5.7.11
 -- PHP Version: 7.0.3
 
@@ -66,7 +66,7 @@ INSERT INTO `fichefrais` (`idVisiteur`, `mois`, `nbJustificatifs`, `montantValid
 ('a55', '1', 5, NULL, '2021-05-14', 'CR'),
 ('chn', '1', 5, '250.00', '2077-01-12', 'CL'),
 ('usb', '1', 4, '250.00', '2021-05-14', 'CR'),
-('usb', '2', 4, NULL, '2021-05-14', 'CR'),
+('usb', '2', 4, '1340.00', '2021-05-15', 'VA'),
 ('usb', '5', 1, '1340.00', '2021-05-14', 'RB');
 
 -- --------------------------------------------------------
@@ -174,7 +174,7 @@ CREATE TABLE `pwdreset` (
 
 INSERT INTO `pwdreset` (`pwdResetid`, `pwdResetEmail`, `pwdResetSelector`, `pwdResetToken`, `pwdResetExpires`) VALUES
 (2, '', '7a9095dcca802f80', '$2y$10$c6okFc0YrTlP1cUmqVgRG.6Dls56ewfUAqx3.0kYpHVw28zcOrabG', '1621029309'),
-(7, 'khalqallahwalid@gmail.com', '1fc1e63a237f286e', '$2y$10$gVH4PZfSw9.3YJuMBFrrH.yDyoqWwA3wXs5KBD7djogAW1ORCMcou', '1621037527');
+(9, 'khalqallahwalid@gmail.com', '9080017f2e1e34a4', '$2y$10$MNY5mEixEfse/vNx9MPHJOxHYNG7lBSoc/zGEgOBdkK4CIjlaBHNa', '1621102892');
 
 -- --------------------------------------------------------
 
@@ -305,7 +305,7 @@ ALTER TABLE `lignefraishorsforfait`
 -- AUTO_INCREMENT for table `pwdreset`
 --
 ALTER TABLE `pwdreset`
-  MODIFY `pwdResetid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `pwdResetid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- Constraints for dumped tables
 --

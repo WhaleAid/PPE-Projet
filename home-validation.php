@@ -200,7 +200,8 @@ if ($_SESSION['USER'] != null) {
                                     </div>
                                     <div id='usr-info' class="user-info card">
                                         <img src="./images/profil/<?php echo $user['portrait'] ?>" alt="Admin" class="rounded-circle" width="150">
-                                        <h4><?php echo $_SESSION['USER']; ?></h4>
+                                        <h4><?php echo $user['nom'] . " " . $user['prenom']; ?></h4>
+                                        <h4><?php echo $user['ville'] ?></h4>
                                         <?php if ($user['comptable'] == 0) { ?>
                                             <p>Visiteur</p>
                                         <?php } else { ?>
@@ -226,6 +227,8 @@ if ($_SESSION['USER'] != null) {
                             <li class="menu-item-normal"><a href="home-horsforfait.php"><i class="bi bi-pencil-square"></i>Saisie Frais Hors Forfait</a></li>
                             <li class="menu-item-active"><a href="home-validation.php"><i class="bi bi-file-earmark-check"></i>Validation Fiches</a></li>
                             <li class="menu-item-normal"><a href="consulterfrais.php"><i class="bi bi-file-earmark-spreadsheet-fill"></i>Consulter Frais</a></li>
+                            <li class="menu-item-normal"><a href="stats.php"><i class="bi bi-file-earmark-bar-graph-fill"></i>Statistiques</a></li>
+                            <li class="menu-item-normal"><a href="users.php"><i class="bi bi-people-fill"></i>Utilisateurs</a></li>
                         </ul>
                     </div>
                     <?php if ($comptablecheck == 1) { ?>
